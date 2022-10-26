@@ -43,7 +43,7 @@ const HeroSection = () => {
                             </section>
                         </div>
                         <div className=' grid justify-items-center items-start'>
-                            <img src={charity} className=" h-[350px] w-[350px] lg:h-[450px] lg:w-[450px]" />
+                            <img src={charity} className=" h-[350px] w-[350px] lg:h-[450px] lg:w-[450px] " />
                         </div>
                         <div className='lg:w-[1280px] grid justify-items-center'>
                             <button className=' p-2 h-12 w-44  text-center border-emerald-500 lg:h-16 lg:w-64 bg-red-500 lg:p-3 rounded-full shadow-gray-500 lg:shadow-md text-white lg:text-3xl lg:font-semibold bg-gradient-to-r from-red-500 to-yellow-400'>

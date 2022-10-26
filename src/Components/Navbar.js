@@ -11,26 +11,23 @@ const Navbar = () => {
             sublinks: [
 
                 {
-                    Head: "Discover",
+                    Head: "Equity Funding",
                     sublinks: [
-                        { title: "Fundraiser", link: "/" },
-                        { title: "GoFundMe Hero", link: "/" },
-                        { title: "Success Stories", link: "/" },
-                        { title: "GoFundMe causes", link: "/" },
-                        { title: "Celebrate Black Joy", link: "/" },
-                        { title: "Crises Relief", link: "/" },
+                        { title: "Working", link: "/" },
+                        { title: "Startup", link: "/" },
+                        { title: "Shops Bullin", link: "/" },
+                        { title: "How Its Work", link: "/" },
 
                     ]
                 },
                 {
-                    Head: "Fundraiser For",
+                    Head: "Donation",
                     sublinks: [
-                        { title: "Fundraiser", link: "/" },
-                        { title: "GoFundMe Hero", link: "/" },
-                        { title: "Success Stories", link: "/" },
-                        { title: "GoFundMe causes", link: "/" },
-                        { title: "Celebrate Black Joy", link: "/" },
-                        { title: "Crises Relief", link: "/" },
+                        { title: "Flood", link: "/" },
+                        { title: "Cancer", link: "/" },
+                        { title: "Accident", link: "/" },
+                        { title: "Needy People", link: "/" },
+
 
                     ]
                 },
@@ -59,7 +56,7 @@ const Navbar = () => {
                             <img src={logo} alt="Logo" />
                         </span>
                     </div>
-                    <div className=' text-3xl absolute right-8 top-6 cursor-pointer md:hidden' onClick={() => setOpen(!open)}>
+                    <div className=' text-3xl absolute right-8 top-4 cursor-pointer md:hidden' onClick={() => setOpen(!open)}>
                         <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                     </div>
 
@@ -70,30 +67,32 @@ const Navbar = () => {
 
 
 
-                    <ul className={`md:flex md:items -center md:pb-0 pb-12 absolute md:static bg-gray-200 h-80 w-full left-0 md:w-auto md:h-auto md:pl-0 pl-9 transition-all duration-700 ease-in ${open ? 'top-[75px] opacity-100' : 'top-[-490px]'} md:opacity-100 `}>
+                    <ul className={`md:flex md:items -center md:pb-0 pb-12 absolute md:static bg-gray-200 h-80 w-full left-0 md:w-auto md:h-auto md:pl-0 pl-9 transition-all duration-700 ease-in ${open ? 'top-[60px] opacity-100' : 'top-[-490px]'} md:opacity-100 `}>
                         {
                             Links.map((item) => {
                                 return (
                                     <>
-                                        <li key={item.name} className=" md:ml-8  text-xl md:my-0 my-4 h-10 group">
+                                        <li key={item.name} className=" md:ml-8  text-xl md:my-0 my-4 w-fit group">
                                             <a href={item.link} className='text-gray-800 hover:text-gray-400  duration-500 '>{item.name}</a>
                                             {
                                                 item.submenu && <div>
                                                     <div className=''>
-                                                        <div className=' absolute lg:top-[45px]  grid grid-cols-2 cursor-pointer  '>
+                                                        <div className=' absolute lg:top-[45px]  grid grid-cols-2 cursor-pointer rounded-lg  '>
                                                             {
                                                                 item.sublinks.map((mysublink) => {
                                                                     return (
                                                                         <>
+
                                                                             <div className='hidden  group-hover:block hover:block
-                                                                            bg-slate-200  lg:mt-8 '>
+                                                                            bg-slate-200  lg:mt-8 h-48 w-52  justify-center '>
+
                                                                                 <h1 className=' font-bold ml-2'>{mysublink.Head}</h1>
                                                                                 {
                                                                                     mysublink.sublinks.map((slink) => {
                                                                                         return (
                                                                                             <>
                                                                                                 <Link to={slink.link}>
-                                                                                                    <li className=' ml-6'>
+                                                                                                    <li className=' ml-6 lg:mt-1 hover:text-slate-400'>
                                                                                                         {slink.title}
 
                                                                                                     </li>
