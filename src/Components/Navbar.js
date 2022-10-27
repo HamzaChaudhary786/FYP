@@ -37,7 +37,7 @@ const Navbar = () => {
             name: "How it works", link: "/"
         },
         {
-            name: "About us", link: "/aboutus",
+            name: "Developers", link: "/aboutus",
         },
 
         {
@@ -61,7 +61,7 @@ const Navbar = () => {
                     </div>
 
                     <div className=' ml-[150px] -mt-12 mr-2 md:mr-0 md:ml-0 md:mt-0  '>
-                        <input type="text" placeholder="  Search Here" className='border border-gray-900 rounded-lg w-[220px] h-[32px]  outline-none cursor-pointer md:w-[320px] md:rounded-md ' />
+                        <input type="text" placeholder="  Search Here" className='border  hover:border-green-400 hover:border-2 rounded-lg w-[220px] h-[32px]  outline-none cursor-pointer md:w-[320px] md:rounded-md ' />
                     </div>
 
 
