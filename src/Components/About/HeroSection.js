@@ -14,7 +14,7 @@ const HeroSection = () => {
                     <div className='pl-24 pr-24 pt-24  text-white text-3xl '>
 
                         <h1 className='text-white text-4 text-6xl font-bold'> ABOUT</h1>
-                        <div className='mt-6 font-semibold  text-cyan-300  w-96 '>Your decentralised cloud computing network.</div>
+                        <div className='mt-6 font-semibold   w-96 '>Your decentralised cloud computing network.</div>
                         <p className='mt-6 '>We unite cloud and blockchain to make computing sustainably cost-effective.</p>
                         <div className='  mt-4'>
                             <button className='bg-indigo-600 bg-opacity-30 p-4 font-bold rounded-lg w-[250px]  ' >View Docs</button>
