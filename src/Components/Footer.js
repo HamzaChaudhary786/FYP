@@ -5,7 +5,7 @@ import logo from '../Assets/newLogo.png'
 const Footer = () => {
     return (
         <>
-            <footer className=' rounded-lg py-10 bg-gradient-to-r from-red-400 to-yellow-500 hover:from-white hover:to-gray-300'>
+            <footer className=' rounded-lg py-10  bg-gradient-to-r from-green-500 to-green-300 via-green-200 hover:from-white hover:to-gray-300'>
                 <div className=' grid grid-cols-2 p-10 lg:p-0 lg:grid lg:grid-cols-3 lg:justify-items-center items-center'>
                     <div >
                         <h1 className=' font-bold'>ABOUT</h1>
