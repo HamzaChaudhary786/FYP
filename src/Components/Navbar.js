@@ -8,9 +8,6 @@ const Navbar = () => {
             name: "How it works", link: "/"
         },
         {
-            name: "Developers", link: "/aboutus",
-        },       
-        {
             name: "Fund Now",
             link: "/",
             submenu: true,
@@ -21,7 +18,7 @@ const Navbar = () => {
                     sublinks: [
                         { title: "Working", link: "/" },
                         { title: "Startup", link: "/" },
-                       
+
 
                     ]
                 },
@@ -30,13 +27,17 @@ const Navbar = () => {
                     sublinks: [
                         { title: "Flood", link: "/" },
                         { title: "Cancer", link: "/" },
-                       
+
 
 
                     ]
                 },
             ]
         },
+        {
+            name: "Developers", link: "/aboutus",
+        },
+
         {
             name: "Sign in", link: "/"
         }
@@ -81,7 +82,7 @@ const Navbar = () => {
                                                                         <>
 
                                                                             <div className='hidden  group-hover:block hover:block
-                                                                            bg-slate-200  lg:mt-8 h-24 w-52  justify-center '>
+                                                                            bg-slate-200  lg:mt-8 h-24 w-52  justify-center rounded -ml-1'>
 
                                                                                 <h1 className=' font-bold ml-2'>{mysublink.Head}</h1>
                                                                                 {

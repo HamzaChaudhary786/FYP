@@ -15,6 +15,7 @@ const api_url = ` https://apidata1.herokuapp.com/apidata`;
 const AppProvider = (({ children }) => {
 
     const [fund, setFund] = useState([]);
+    const[money , setMoney]=useState([]);
 
 
 
@@ -27,6 +28,7 @@ const AppProvider = (({ children }) => {
             console.log(data);
             if (data.Response === "True") {
                 setFund(data.Search);
+                setMoney(data.Recived_Dollar)
             }
             else {
                 console.log("Error Accurs");
@@ -59,7 +61,7 @@ const AppProvider = (({ children }) => {
 
 
     return (
-        <ContextApp.Provider value={{ fund }}>
+        <ContextApp.Provider value={{ fund ,money }}>
             {children}
         </ContextApp.Provider>
     )

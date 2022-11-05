@@ -1,32 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import image from '../Assets/frontimage.PNG'
 import { useGlobalContext } from './Context'
 import charity from '../Assets/charity.png'
 
-const counter = [
+// const counter = [
 
 
-    {
-        "id": "1",
-        "title": "Project Found",
-        "value": "$5000",
-    },
-    {
-        "id": "2",
-        "title": "Project Dollar",
-        "value": "$56,000",
-    },
-    {
-        "id": "3",
-        "title": "Pledgar",
-        "value": "$5000",
-    }
-]
+//     {
+//         "id": "1",
+//         "title": "Project Found",
+//         "value": "$5000",
+//     },
+//     {
+//         "id": "2",
+//         "title": "Project Dollar",
+//         "value": "$56,000",
+//     },
+//     {
+//         "id": "3",
+//         "title": "Pledgar",
+//         "value": "$5000",
+//     }
+// ]
 
 
 
 const HeroSection = () => {
-    const { fund } = useGlobalContext();
+    const { fund , money } = useGlobalContext();
+
 
 
     return (
@@ -66,13 +67,13 @@ const HeroSection = () => {
                 <div className='  mt-2  text-center font-bold grid justify-items-center items-center   '>
                     <div className=' grid-cols-1   h-96  w-[450px]  text-center grid justify-items-center lg:mr-0  lg:h-36  lg:mt-4 lg:grid-cols-3 lg:w-[1285px] '>
                         {
-                            counter.map((item) => {
-                                const { id, title, value } = item;
+                            money.map((item) => {
+                                const { dollar , project } = item;
                                 return (
                                     <>
-                                        <section className=' text-white bg-gradient-to-r from-green-500 to-green-300 w-[450px]  lg:h-32 lg:w-96 mt-1  grid items-center  rounded-xl  ' key={id}>
-                                            <div className=' font-bold text-4xl'>{item.value} <br></br>
-                                                <span className=' font-normal  text-sm'>{item.title}</span></div>
+                                        <section className=' text-white bg-gradient-to-r from-green-500 to-green-300 w-[450px]  lg:h-32 lg:w-96 mt-1  grid items-center  rounded-xl  ' >
+                                            <div className=' font-bold text-4xl'>{dollar} <br></br>
+                                                <span className=' font-normal  text-sm'>{project}</span></div>
                                         </section>
                                     </>
                                 )
@@ -97,9 +98,9 @@ const HeroSection = () => {
 
 
 
-                    <section className='bg-gradient-to-r from-green-500 to-green-300 via-green-200 h-[350px] w-[450px] ml-4 rounded lg:h-64 lg:w-[1260px] lg:ml-8 '>
+                    <section className='bg-gradient-to-r from-green-500 to-green-300 via-green-200 h-[350px] w-[450px] ml-7 rounded lg:h-64 lg:w-[1260px] lg:ml-8 '>
 
-                        <div className='h-[250px]  lg:mr-10 lg:grid lg:grid-cols-3 lg:h-48 lg:w-auto   lg:justify-items-center lg:items-center '>
+                        <div className='h-[250px]  lg:mr-10 lg:grid lg:grid-cols-3 lg:h-48 lg:w-auto   lg:justify-items-center  lg:items-center '>
                             <div className=''>
                                 <div className='flex mt-2 ml-2 lg:ml-10 lg:text-xl '>
                                     <div className=' h-7 w-7 rounded-full border border-black text-center lg:mt-1'>1</div>
@@ -142,13 +143,29 @@ const HeroSection = () => {
                         <div className='lg:grid lg:grid-cols-3 text-gray-800 lg:justify-items-start lg:gap-x-14 lg:mt-4 mb-4 '>
                             {
                                 fund.map((funde) => {
-                                    const { id, title, description, poster } = funde;
+                                    const { id, title, description, value, poster } = funde;
                                     return (
                                         <>
-                                            <section key={id} className="mt-2 p-2 lg:mb-0 rounded-t-2xl  mb-2 border  cursor-pointer lg:h-[430px] lg:w-[360px] lg:ml-24 bg-gradient-to-r from-green-500 to-green-300 via-green-200 hover:from-green-500 hover:to-green-700  rounded-2xl">
+                                            <section key={id} className="mt-2 p-2 lg:mb-0 rounded-t-2xl  mb-2 border  cursor-pointer lg:h-[470px] lg:w-[360px] lg:ml-24 bg-gradient-to-r from-green-500 to-green-300 via-green-200 hover:from-green-500 hover:to-green-700  rounded-2xl">
                                                 <img src={poster} className=' lg:rounded-t-xl hover:scale-105 hover:ease-in-out  hover:duration-500' />
                                                 <h1 className='m-2 font-bold lg:mt-6'>{title} </h1>
-                                                <p className='m-2 mt-4 font-normal'>{description} </p>
+                                                <p className='m-2 mt-4 font-normal  '>{description} </p>
+
+                                                <div className='w-[100%] border-2 border-black rounded-r-lg'>
+                                                    <div className={`bg-indigo-400 h-4 text-center rounded-r-lg text-xs`}
+                                                        style={{
+                                                            opacity: 1,
+                                                            width: `${value}%`
+                                                        }}
+                                                        >
+                                                        {value}%
+
+                                                    </div>
+                                                </div>
+
+
+
+
                                             </section>
                                         </>
                                     )
@@ -157,6 +174,7 @@ const HeroSection = () => {
 
                             }
                         </div>
+
                     </div>
                 </section>
 
