@@ -6,6 +6,8 @@ import About from './Pages/About';
 import DeveloperAbout from './Pages/DeveloperAbout';
 import Floods from './Pages/Floods';
 import SingleFlood from './Components/SingleFlood';
+import Sign_In from './Pages/Sign_In';
+import Sign_Up from './Pages/Sign_Up';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
       <Route path='/aboutdescription' element={<DeveloperAbout/>}/>
       <Route path='/floods' element={<Floods/>}/>
       <Route path='singleflood/:id' element={<SingleFlood/>}/>
+      <Route path ='/signin' element={<Sign_In/>}/>
+      <Route path ='/signup' element={<Sign_Up/>}/>
 
 
       <Route path='*' element={<Error/>}/>

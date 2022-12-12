@@ -40,7 +40,7 @@ const Navbar = () => {
         },
 
         {
-            name: "Sign in", link: "/"
+            name: "Sign in", link: "/signin"
         }
     ];
     let [open, setOpen] = useState(false);

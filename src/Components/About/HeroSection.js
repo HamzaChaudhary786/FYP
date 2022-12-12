@@ -8,6 +8,12 @@ import logo1 from '../../Assets/hamza.png'
 import logo3 from '../../Assets/moiz.png'
 import { Link } from 'react-router-dom'
 const HeroSection = () => {
+
+
+
+    const scrollToTop = () => {
+        window.scrollTo(500, 480)
+    }
     return (
         <>
             <div className=' bg-gray-900 '>
@@ -50,7 +56,7 @@ const HeroSection = () => {
                 <div className='mt-12'>
                     <div className='font-bold text-5xl font-sans grid justify-items-center w-auto text-green-500 '><h1 >Meet the Team</h1></div>
 
-                    <Link to='/aboutdescription' >
+                    <Link to='/aboutdescription' onClick={scrollToTop}>
                         <div className=' grid grid-cols-1 lg:grid lg:grid-cols-3 justify-items-center items-center  mt-12'>
                             <div className='bg-gray-700 h-[450px] w-[250px] grid justify-items-center  rounded-lg lg:mt-[0px] hover:border-white hover:border-2  hover:scale-105 duration-500 mb-8 '>
                                 <div className='  w-[250px] justify-items-center'>

@@ -3,7 +3,8 @@ import React, { useContext, useState, useEffect } from "react";
 const ContextApp = React.createContext();
 
 
-const api_url = ` https://apidata1.herokuapp.com/apidata`;
+// const api_url = ` https://apidata1.herokuapp.com/apidata`;
+const api_url = ` http://localhost:3001/apidata`;
 
 const AppProvider = (({ children }) => {
 

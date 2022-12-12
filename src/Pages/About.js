@@ -1,8 +1,7 @@
 import React from 'react'
-import Footer from '../Components/Footer'
-import HeroSection from '../Components/About/HeroSection'
 import Navbar from '../Components/Navbar'
-
+import HeroSection from '../Components/About/HeroSection'
+import Footer from '../Components/Footer'
 const About = () => {
   return (
     <>
