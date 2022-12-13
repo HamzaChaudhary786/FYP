@@ -50,7 +50,7 @@ const Navbar = () => {
     return (
         <>
             <div className=' shadow-md w-full top-0 left-0 '>
-                <div className=' md:flex py-2 bg-gray-800 md:px-10 px-7  items-center justify-between '>
+                <div className=' md:flex  py-1 bg-gray-800 md:px-10 px-7 h-fit  items-center justify-between '>
                     <div className=' h-4 w-24 mb-10 cursor-pointer'>
                         <Link to='/'>
                             <span className=' text-3xl text-indigo-600 mr-1 mt-2'>
@@ -63,9 +63,14 @@ const Navbar = () => {
                         <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                     </div>
 
-                    <div className='ml-[120px]  lg:ml-[150px] -mt-12 mr-2 md:mr-0 md:ml-0 md:mt-0 md:rounded-md border w-fit  hover:border-green-400 hover:border-2 rounded-lg  cursor-pointer bg-white flex '>
-                        <span className='m-2  '><ion-icon name="search-outline"></ion-icon></span>
-                        <input type="text" placeholder="  Search Here" className=' w-[220px] h-[32px]  outline-none border-none  md:w-[300px] rounded-md'
+
+                        {/* Search Section */}
+
+
+
+                    <div className='ml-[120px]  lg:ml-[150px] -mt-12 mr-2 md:mr-0 md:ml-0 md:mt-0 rounded-full border  hover:border-green-400 hover:border-2 items-center  cursor-pointer bg-white flex w-fit h-fit '>
+                        <span className='m-2  grid items-center '><ion-icon name="search-outline"></ion-icon></span>
+                        <input type="text" placeholder=" Search Here" className=' w-[180px] h-[28px] rounded-lg  outline-none border-none md:w-[200px] md:h-[30px] md:rounded-xl'
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
                         />
@@ -74,7 +79,7 @@ const Navbar = () => {
 
 
 
-                    <ul className={`md:flex md:items -center md:pb-0 pb-12 absolute md:static bg-gray-800 h-80 w-full left-0 md:w-auto md:h-auto md:pl-0 pl-9 transition-all duration-700 ease-in ${open ? 'top-[60px] opacity-100' : 'top-[-490px]'} md:opacity-100 `}>
+                    <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-gray-800 h-80 w-full left-0 md:w-auto md:h-auto md:pl-0 pl-9 transition-all duration-700 ease-in ${open ? 'top-[60px] opacity-100' : 'top-[-490px]'} md:opacity-100 `}>
                         {
                             Links.map((item) => {
                                 return (
